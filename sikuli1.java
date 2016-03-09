@@ -25,15 +25,9 @@ import static org.sikuli.api.API.*;
 
 public class sikuli {
 
-  /**
-	 * @param args
-	 * @throws MalformedURLException 
-	 */
 	@Test
 	public void sikuli1() throws MalformedURLException {
-		// TODO Auto-generated method stub
-		 // Open the main page of Google Code in the default web browser
-		//WebDriver wd;
+		
 		String google,googleplus;
 		DesiredCapabilities capability = DesiredCapabilities.firefox();
 		WebDriver wd = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capability);
@@ -67,16 +61,9 @@ public class sikuli {
 		        URL imageURL = new URL("http://dl.dropbox.com/u/71926343/sikuli.png");                
 		        Target imageTarget = new ImageTarget(imageURL);
 		                        
-		        // Wait for the target to become visible on the screen for at most 5 seconds
-		        // Once the target is visible, it returns a screen region object corresponding
-		        // to the region occupied by this target
+		        
 		        ScreenRegion r = s.wait(imageTarget,5000);
 		                        
-		        // Display "Hello World" next to the found target for 3 seconds
-		        //Canvas canvas = new DesktopCanvas();
-		        //canvas.addLabel(r, "Hello World").display(3);
-		        
-		        // Click the center of the found target
 		        Mouse mouse = new DesktopMouse();
 		        mouse.click(r.getCenter());
 		        mouse.click(r.getCenter());
@@ -105,7 +92,7 @@ public class sikuli {
 		
         //browse(new URL("http://code.google.com"));
       
-        // Create a screen region object that corresponds to the default monitor in full screen 
+        
        
 
 	}
